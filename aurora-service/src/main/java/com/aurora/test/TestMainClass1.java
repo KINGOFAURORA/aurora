@@ -14,17 +14,19 @@ import java.util.Map;
  **/
 public class TestMainClass1 {
     public static void main(String[] args) {
-        Map<String, Object> map = Maps.newHashMap();
-        map.put("1", 1);
-        map.put("2", 2);
-        map.put("3", 3);
-        map.put("4", 4);
-        Iterator it = map.keySet().iterator();
-        while(it.hasNext()){
-            it.next();
-            it.remove();
-//            map.remove(it.next());
-        }
-        System.out.println(map);
+//        Map<String, Object> map = Maps.newHashMap();
+//        map.put("1", 1);
+//        map.put("2", 2);
+//        map.put("3", 3);
+//        map.put("4", 4);
+//        Iterator it = map.keySet().iterator();
+//        while(it.hasNext()){
+//            it.next();
+//            it.remove();
+////            map.remove(it.next());
+//        }
+//        System.out.println(map);
+        ClassLoadTester  classLoadTester = new ClassLoadTester();
+        System.out.println(ClassLoadTester.a);
     }
 }
