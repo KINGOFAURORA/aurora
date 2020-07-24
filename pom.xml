@@ -131,13 +131,6 @@
             </dependency>
             <!--test end-->
 
-            <!--MT util-->
-            <dependency>
-                <groupId>com.sankuai.mms</groupId>
-                <artifactId>mms-boot-jetty9</artifactId>
-                <version>1.2.2</version>
-            </dependency>
-
             <!--tools-->
             <dependency>
                 <groupId>commons-beanutils</groupId>
