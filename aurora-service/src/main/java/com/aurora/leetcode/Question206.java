@@ -33,6 +33,22 @@ public class Question206 {
         return head;
     }
 
+    /**
+     * 递归法
+     *
+     * @param head
+     * @return
+     */
+    public static ListNode reverseList1(ListNode head) {
+        if (head.next == null) {
+            return head;
+        }
+        ListNode tail = reverseList1(head.next);
+        head.next.next = head;
+        head.next = null;
+        return tail;
+    }
+
     public static void main(String[] args) {
         ListNode ln1 = new ListNode(1);
         ListNode ln2 = new ListNode(2);
@@ -44,7 +60,7 @@ public class Question206 {
         ListNode ln5 = new ListNode(5);
         ln4.next = ln5;
 
-        ln1 = reverseList(ln1);
+        ln1 = reverseList1(ln1);
 
         while (ln1 != null) {
             System.out.println(ln1.val);
