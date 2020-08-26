@@ -9,6 +9,7 @@ import com.aurora.dao.AuroraTestDao;
 import com.aurora.domain.ContentEvent;
 import com.aurora.factory.IFactory;
 import com.aurora.po.AuroraTestTablePO;
+import com.aurora.service.TemplateService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,19 @@ public class Test1 {
 
     @Resource
     private AuroraTestDao auroraTestDao;
+
+    @Resource
+    private TemplateService templateService;
+
+    @Test
+    public void testGetValue(){
+        System.out.println(templateService.getValue());
+    }
+
+    @Test
+    public void testHello(){
+        System.out.println("OK");
+    }
 
     @Test
     public void testDao(){
