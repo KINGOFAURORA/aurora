@@ -26,5 +26,6 @@ public class TestMainClass1 {
 //            map.remove(it.next());
         }
         System.out.println(map);
+        System.out.println("ok");
     }
 }
