@@ -1,7 +1,7 @@
 package org.aurora.test;
 
 import com.aurora.service.TemplateService;
-import com.aurora.strategy.NeoStrategyContext;
+import com.aurora.strategy.StrategyFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -28,10 +28,10 @@ public class ServiceTest {
     }
 
     @Resource
-    private NeoStrategyContext strategyContext;
+    private StrategyFactory strategyFactory;
 
     @Test
     public void testStrategy(){
-        System.out.println(strategyContext.doMethod("add", 2, 1));
+        System.out.println(strategyFactory.getStrategy("add").strategyMethod(1,2));
     }
 }
