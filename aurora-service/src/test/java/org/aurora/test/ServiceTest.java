@@ -1,6 +1,7 @@
 package org.aurora.test;
 
 import com.aurora.service.TemplateService;
+import com.aurora.strategy.NeoStrategyContext;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -24,5 +25,13 @@ public class ServiceTest {
     @Test
     public void testGetValue(){
         System.out.println(templateService.getValue());
+    }
+
+    @Resource
+    private NeoStrategyContext strategyContext;
+
+    @Test
+    public void testStrategy(){
+        System.out.println(strategyContext.doMethod("add", 2, 1));
     }
 }
